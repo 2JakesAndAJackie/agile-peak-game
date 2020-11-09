@@ -1,28 +1,43 @@
 const express = require('express');
 const routes = require('./controllers');
 const sequelize = require('./config/connection');
+const path = require('path');
 
-// Handlebars.js template engine
+//Handlebars.js template engine 
 const exphbs = require('express-handlebars');
 const hbs = exphbs.create({});
 
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-app.engine('handlbars', hbs.engine);
+const session = require('express-session');
+const SequelizeStore = require('connect-session-sequelize')(session.Store);
+const sess = {
+    secret: 'Super secret secret',
+    cookie: [],
+    resave: false,
+    saveUninitialized: true,
+    store: new SequelizeStore({db: sequelize})
+};
+
+app.use(session(sess));
+
+app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
-// Middleware function that takes all contents of a folder, serves them as a static asset 
+// built in middleware function that can take all of the contents of a folder and serve them as static assets. 
+// useful for front-end specific files like images, style sheets and javascript files. 
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Turns on routes
+// Turn on routes
 app.use(routes);
 
+// turn on connection to db and server
+// the sunc part means that this is Sequelize taking the models and connecting them to associated DB tables. If no table, it'll create it for you
+// FORCE doesn't have to be included, but if set to tru, it drops and recreates all the database tables on startup - functions like DROP TABLE IF EXISTS
 
-// Connection to db and server
-// Force, if set to true, drops and recreates all DB tables on startup
 sequelize.sync({force: false}).then( () => {
     app.listen(PORT, () => console.log('Now Listening'));
 });
