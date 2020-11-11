@@ -39,14 +39,14 @@ User.init(
                 len: [4]
             }
         },
-        state: {
-            type: DataTypes.INTEGER,
-            allowNull: true
-        },
-        textNode: {
-            type: DataTypes.INTEGER,
-            allowNull: false
-        }
+        // state: {
+        //     type: DataTypes.INTEGER,
+        //     allowNull: true
+        // },
+        // textNode: {
+        //     type: DataTypes.INTEGER,
+        //     allowNull: true
+        // }
     },
     {
         hooks: {

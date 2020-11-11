@@ -1,1 +1,1 @@
-# project2
+# just-tech-news

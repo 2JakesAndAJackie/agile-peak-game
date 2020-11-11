@@ -1,22 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script defer src="game.js"></script>
 
-    <title>Text Adventure</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text Adventure</title>
+  <link rel="stylesheet" href="stylesheets/style.css">
 </head>
+
 <body>
-    <div class="container">
-        <div id="text">Text</div>
-        <div id="option-buttons" class="btn-grid">
-            <button class="btn">Option 1</button>
-            <button class="btn">Option 2</button>
-            <button class="btn">Option 3</button>
-            <button class="btn">Option 4</button>
-        </div>
-    </div>
+    <main>
+        <h1>
+            <a href="/">Text Adventure</a>
+        </h1>
+        <nav>
+            <a href="/login">Login</a>
+            <button id="logout" class="btn-no-style">Logout</button>
+        </nav>
+        {{{ body }}}
+    </main>
+  </div>
+
+<script src="javascript/logout.js"></script>
 </body>
+
 </html>

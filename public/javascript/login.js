@@ -1,9 +1,10 @@
+
+
 // async tells us "This function does something asynchronous!"
 async function signupFormHandler(event) {
     event.preventDefault();
 
     const username = document.querySelector('#username-signup').value.trim();
-    const email = document.querySelector('#email-signup').value.trim();
     const password = document.querySelector('#password-signup').value.trim();
 
     if (username && password) {
@@ -17,6 +18,7 @@ async function signupFormHandler(event) {
           // check the response status
         if (response.ok) {
             console.log('Success!');
+            document.location.replace('/');
         }
         else {
             alert(response.statusText);
@@ -27,12 +29,13 @@ async function signupFormHandler(event) {
 async function loginFormHandler(event) {
     event.preventDefault();
 
+    const username = document.querySelector('#username-login').value.trim();
     const password = document.querySelector('#password-login').value.trim();
 
     if (password) {
         const response = await fetch('/api/users/login', {
             method: 'post',
-            body: JSON.stringify({ password }),
+            body: JSON.stringify({ username, password }),
             headers: { 'Content-Type' : 'application/json'}
         });
 
