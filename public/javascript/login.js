@@ -6,11 +6,11 @@ async function signupFormHandler(event) {
     const email = document.querySelector('#email-signup').value.trim();
     const password = document.querySelector('#password-signup').value.trim();
 
-    if (username && email && password) {
+    if (username && password) {
         // await gets assigned to a variable, so we don't need to use then() or catch() at Promise completion. 
         const response = await fetch('/api/users', {
             method: 'post',
-            body: JSON.stringify({ username, email, password }),
+            body: JSON.stringify({ username, password }),
             headers: { 'Content-Type' : 'application/json'}
         });
 
@@ -27,13 +27,12 @@ async function signupFormHandler(event) {
 async function loginFormHandler(event) {
     event.preventDefault();
 
-    const email = document.querySelector('#email-login').value.trim();
     const password = document.querySelector('#password-login').value.trim();
 
-    if (email && password) {
+    if (password) {
         const response = await fetch('/api/users/login', {
             method: 'post',
-            body: JSON.stringify({ email, password }),
+            body: JSON.stringify({ password }),
             headers: { 'Content-Type' : 'application/json'}
         });
 
