@@ -2,7 +2,7 @@
 
 const router = require('express').Router();
 const sequelize = require('../config/connection');
-// const {model, model, model} = require('../models);
+// const {User} = require('../models');
 
 router.get('/login', (req, res) => {
     if(req.session.loggedIn) {
