@@ -1,4 +1,12 @@
 
+let logInButton = document.getElementById('login-popin');
+let signupButton = document.getElementById('signup-popin');
+let logInContainer = document.getElementById('login-container');
+let signupContainer = document.getElementById('signup-container');
+let buttonContainer = document.getElementById('button-container');
+let logInInstead = document.getElementById('login-instead');
+let signupInstead = document.getElementById('signup-instead');
+
 
 // async tells us "This function does something asynchronous!"
 async function signupFormHandler(event) {
@@ -51,13 +59,6 @@ async function loginFormHandler(event) {
 document.querySelector('.login-form').addEventListener('submit', loginFormHandler);
 document.querySelector('.signup-form').addEventListener('submit', signupFormHandler);
 
-let logInButton = document.getElementById('login-popin');
-let signupButton = document.getElementById('signup-popin');
-let logInContainer = document.getElementById('login-container');
-let signupContainer = document.getElementById('signup-container');
-let buttonContainer = document.getElementById('button-container');
-let logInInstead = document.getElementById('login-instead');
-let signupInstead = document.getElementById('signup-instead');
 
 logInButton.addEventListener('click', function(e) {
     logInContainer.classList.toggle('is-open');
