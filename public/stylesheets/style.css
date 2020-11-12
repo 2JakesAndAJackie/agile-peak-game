@@ -122,7 +122,8 @@ a:active {
 
 .title-container h1 {
     font-family: var(--title-font);
-    color: var(--white);
+    /* Jake Change, white to black */
+    color: var(--black);
     font-size: 100px;
     opacity: 0.0;
     text-transform: uppercase;
