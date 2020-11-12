@@ -196,7 +196,7 @@ const textNodes = [
           //uncursed route
           text: "Continue",
           requiredState: (currentState) => currentState.notCursed,
-          nextText: 100
+          nextText: 1000
         },
       ]
     },
@@ -213,21 +213,156 @@ const textNodes = [
           nextText: 12
         },
         {
-          text: "Go to the Biosphere",
+          text: "Go to the Oxygen Garden",
           nextText: 13
         }
       ]
     },
+
+
+
+
     {
-      id: 11,
-      text: 'You threw your jar of goo at the monster and it exploded. After the dust settled you saw the monster was destroyed. Seeing your victory you decide to claim this castle as your and live out the rest of your days there.',
+      id: 1000,
+      text: "A soft whirring sound wakes you. You groan as you lean up to see the door to your finish opening, but no one in sight.",
       options: [
         {
-          text: 'Congratulations. Play Again.',
+          text: "Go back to sleep",
+          nextText: 1001
+        },
+        {
+          text: "Call out to see who opened your door",
+          nextText: 1002
+        },
+        {
+          text: "Get up and go out to the hallway",
+          nextText: 1003
+        }
+      ]
+    },
+    {
+      id: 1001,
+      text: "You mumble as you lie back down and close your eyes. As consciousness starts to fade once again, you hear shuffling to your side. Your eyes flash open in time to a large wrench being swung. It crashes into your head before you can react, fracturing the skull in a blinding burst of pain. You try to scream but your body doesn't respond. You hear the crunch of your skull as the wrench smashes into it again, and again...",
+      options: [
+        {
+          text: 'Restart',
           nextText: -1
         }
       ]
+    },
+    {
+      id: 1002,
+      text: "You hear nothing. Not even footsteps. That faulty door's been such a nightmare as of late. You're too awake now to go back to sleep, so you get to your feet. You glance at your clock - it's 0600 hours.",
+      options: [
+        {
+          text: "Trudge out to the hall",
+          nextText: 1003
+        }
+      ]
+    },
+    {
+      id: 1003,
+      text: "Something grabs your attention at the end of the hallway, but you don't see anything unusual. Perhaps someone had just walked by and caught the corner of your eye. You shrug away the ill feeling. The Captain had been clear you need to talk to Jocelyn first thing.",
+      options: [
+        {
+          text: "Check the ship's logs",
+          nextText: 1004
+        },
+        {
+          text: "Go see Jocelyn",
+          nextText: 1005
+        },
+        {
+          text: "Head to the Cafeteria for breakfast",
+          nextText: 1006
+        },
+        {
+          text: "Go see Captain Jessop",
+          nextText: 1007
+        }
+      ]
+    },
+    {
+      id: 1004,
+      text: "In Communications, you log onto the terminal and see two new alerts. The first alert reads: 'Oxygen consumption levels increased by 46% between the hours of 0200 and 0400 compared to the average consumption during those hours'. You are about to read the next alert when you hear footsteps outside the room.",
+      options: [
+        {
+          text: "Read the second alert",
+          nextText: 1008
+        },
+        {
+          text: "Go see Captain Jessop",
+          nextText: 1007
+        },
+        {
+          text: "Head to the Cafeteria for breakfast",
+          nextText: 1009
+        },
+        {
+          text: "Hide",
+          nextText: 1010
+        }
+      ] 
+    },
+    {
+      id: 1005,
+      text: "You raise your fist to knock on the door and it opens. Jocelyn sits, looking as impassive as ever.",
+      options: [
+        {
+          text: "Tell her what happened to the crew",
+          nextText: 1012
+        },
+        {
+          text: "Tell her about the ring",
+          nextText: 1013
+        },
+        {
+          text: "Tell her about this morning",
+          nextText: 1014
+        }
+      ]
+    },
+    {
+      id: 1008,
+      text: "You start to read the second alert when the door opens. You turn to see Captain Jessop, eyes narrowed. You can't tell if he's just grumpy as usual, suspicious of you, or about to chop your head off. Without a word he whips around and walks out of sight. You sigh, then read the second alert: 'Unidentified obstruction preventing proper airflow to Cafeteria.'",
+      options: [
+        {
+          text: "Go to Cafeteria",
+          nextText: 1015
+        },
+        {
+          text: "Grab the astro knife, then go to the Cafeteria",
+          requiredState: (currentState) => currentState.knife,
+          nextText: 1016
+        }
+      ]
+    },
+    {
+      id: 1010,
+      text: "With shocking agility you find yourself curled up behind the desk. The door opens and the padding of footsteps approach. They grow closer to the desk as your breathing gets shaky. You could swear each breath was as loud as a crack of thunder. Suddenly there's a loud bang on the table. 'What in the hell are you doing? This is why I told you to get your ass to Jocelyn', Jessop says. You look up at him, a little ashamed and very much embarrassed. 'Why are you sitting there all sheepish. Get your ass in gear now!' he shouts.",
+      options: [
+        {
+          text: "Run to Jocelyn",
+          nextText: 1011
+        },
+        {
+          text: "Run to Jocelyn",
+          nextText: 1011
+        },
+        {
+          text: "Run to Jocelyn",
+          nextText: 1011
+        },
+        {
+          text: "Run to Jocelyn",
+          nextText: 1011
+        }
+      ]
+    },
+    {
+
     }
+
   ]
   
 
