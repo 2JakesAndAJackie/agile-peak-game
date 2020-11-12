@@ -7,6 +7,10 @@
 #2 - Title Container
 ---------------------
 #3 - Buttons
+---------------------
+#4 - Text Adventure Box
+---------------------
+#5 - Backgrounds
 */
 
 /* #0 - CSS Variables */
@@ -18,10 +22,8 @@
 
     /* Document Fonts */
     --title-font: 'Orbitron', sans-serif;
-    ;
-    --body-font: 'Turret Road', cursive;
-    ;
-    --header-font: 'Unica One', cursive;
+    --body-font: 'Titillium Web', sans-serif;
+    --header-font: 'Turret Road', cursive;
     --heavy: 700;
     --regular: 400;
 }
@@ -60,7 +62,6 @@ a:active {
 .document-container {
     width: 100%;
     height: 100vh;
-    background: url("../assets/images/AdobeStock_311296925.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center
@@ -284,8 +285,183 @@ a:active {
 .login-button:hover,
 .login-button:focus,
 .signup-button:hover,
-.signup-button:focus {
+.signup-button:focus,
+.btn:hover,
+.btn:focus {
     color: var(--white);
     background: var(--black);
     cursor: pointer;
+}
+
+/* Text Adventure Box */
+
+#text {
+    text-transform: lowercase;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #f3f3f3;
+}
+
+.container {
+    width: 600px;
+    margin: auto;
+    border: 2px solid var(--black);
+    border-radius: 4px;
+    background: var(--white);
+    padding: 20px;
+    font-style: var(--body-font)
+}
+
+.margin-top-container {
+    padding-top: 20vh
+}
+
+.full-page-container {
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center
+}
+
+.btn {
+    font-family: var(--body-font);
+    font-size: 18px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    border: 2px solid var(--black);
+    background: var(--white);
+    text-align: center;
+    color: var(--black);
+    cursor: pointer;
+    font-weight: bold;
+    padding: 10px 15px
+}
+
+.btn-grid {
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between
+}
+
+.option-one,
+.option-two,
+.option-three,
+.option-four {
+    margin-top: 10px
+}
+.option-one {
+    grid: 1
+}
+
+.option-two {
+    grid: 2
+}
+
+.option-three {
+    grid: 3
+}
+
+.option-four {
+    grid: 4
+}
+
+@media only screen and (max-width: 700px) {
+    .container {
+        width: 550px;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .container {
+        width: 380px
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .container {
+        width: 320px
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .contaienr {
+        width: 300px
+    }
+}
+
+/* #5 - Backgrounds */
+
+.twin-peaks {
+    background: url("../images/AdobeStock_311296925.jpeg");
+}
+
+.background-space {
+    background-image: url('../assets/images/AdobeStock_67578633.jpeg');
+}
+
+.background-hydro-racks {
+    background-image: url('../assets/images/AdobeStock_187209494.jpeg')
+}
+
+.background-rock-circle-earth {
+    background-image: url('../assets/images/AdobeStock_196443728.jpeg')
+}
+
+.background-event-horrizon {
+    background-image: url('../assets/images/AdobeStock_277854607.jpeg')
+}
+
+.background-neon-circle {
+    background-image: url('../assets/images/AdobeStock_286016841.jpeg')
+}
+
+.background-black-and-white {
+    background-image: url('../assets/images/AdobeStock_303699882.jpeg')
+}
+
+.black-white-planet-moon {
+    background-image: url('../assets/images/AdobeStock_199518545.jpeg')
+}
+
+.black-white-planet-sun {
+    background-image: url('../assets/images/AdobeStock_198557024.jpeg')
+}
+
+.black-white-eight-planet-sun {
+    background-image: url('../assets/images/AdobeStock_202458781.jpeg')
+}
+
+.black-white-saturn-sun {
+    background-image: url('../assets/images/AdobeStock_390173787.jpeg')
+}
+
+.black-white-mountains-sun {
+    background-image: url('../assets/images/AdobeStock_366561294.jpeg')
+}
+
+.black-white-saturn {
+    background-image: url('../assets/images/AdobeStock_363627223.jpeg')
+}
+
+.black-white-sun-plain {
+    background-image: url('../assets/images/AdobeStock_372285041.jpeg')
+}
+
+.black-white-solar-system {
+    background-image: url('../assets/images/AdobeStock_202458776.jpeg')
+}
+
+.black-white-grid-on-space {
+    background-image: url('../assets/images/AdobeStock_361821815.jpeg')
+}
+
+.black-white-sunshine-grid {
+    background-image: url('../assets/images/AdobeStock_386942903.jpeg')
+}
+
+.black-white-moon-view-earth {
+    background-image: url('../assets/images/AdobeStock_198557032.jpeg')
 }
