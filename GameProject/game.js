@@ -323,6 +323,35 @@ const textNodes = [
       ]
     },
     {
+      id: 1006,
+      text: "Once in the Cafeteria you go straight to the food dispenser. You see some hastily-cleaned ketchup or other sauce. You press the button to get today's breakfast. You hear some whirring, then the machine churns and starts to making clunking noises before stopping. You look down at your plate to see most of a hand sitting on it. Your heart begins pounding, threatening to burst from your ribcage. You turn to flee and find yourself facing someone in full spacesuit. You're almost too shocked to notice blade now sticking in your belly. The knife is yanked across your abdomen and removed in one fluid motion. You fumble to keep your organs in your body as you collapse to the ground. How is it getting so cold, so fast...?",
+      options: [
+        {
+          text: "Restart",
+          nextText: -1
+        }
+      ]
+    },
+    {
+      id: 1007,
+      text: "You go to the Bridge, only to find it empty. You had been so sure that Captain Jessop permanently resided to that room.",
+      options: [
+        {
+          text: "Go to Jocelyn",
+          nextText: 1011
+        },
+        {
+          text: "Go to the Cafeteria",
+          nextText: 1015
+        },
+        {
+          text: "Grab the astro knife, then go to the Cafeteria",
+          requiredState: (currentState) => currentState.knife,
+          nextText: 1016
+        }
+      ]
+    },
+    {
       id: 1008,
       text: "You start to read the second alert when the door opens. You turn to see Captain Jessop, eyes narrowed. You can't tell if he's just grumpy as usual, suspicious of you, or about to chop your head off. Without a word he whips around and walks out of sight. You sigh, then read the second alert: 'Unidentified obstruction preventing proper airflow to Cafeteria.'",
       options: [
@@ -360,7 +389,8 @@ const textNodes = [
       ]
     },
     {
-
+      id: 1011,
+      text: "blah..."
     }
 
   ]
