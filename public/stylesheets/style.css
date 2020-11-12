@@ -1,56 +1,468 @@
-*, *::before, *::after {
-  box-sizing: border-box;
-  font-family: 'Courier New', Courier, monospace;
+/* TABLE OF CONTENTS
+---------------------
+#0 - CSS Variables
+---------------------
+#1 - Global Settings 
+---------------------
+#2 - Title Container
+---------------------
+#3 - Buttons
+---------------------
+#4 - Text Adventure Box
+---------------------
+#5 - Backgrounds
+*/
+
+/* #0 - CSS Variables */
+
+:root {
+    /* Color Palette */
+    --black: #000;
+    --white: #FFFFFF;
+
+    /* Document Fonts */
+    --title-font: 'Orbitron', sans-serif;
+    --body-font: 'Titillium Web', sans-serif;
+    --header-font: 'Turret Road', cursive;
+    --heavy: 700;
+    --regular: 400;
 }
 
+/* #1 - Global Settings */
+
+html,
 body {
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  height: 100vh;
-  background-color: #333;
+    font-family: var(--body-font);
+    font-style: normal;
+    font-weight: var(--regular);
+    color: var(--black);
+    font-size: 24px;
+    line-height: 140%;
+    width: 100%;
+    height: 100%;
 }
 
-a {
-  color: white;
+h1,
+h2 {
+    font-family: var(--header-font);
+    font-style: normal;
+    font-weight: var(--heavy);
+    font-size: 50px;
+    line-height: 110%;
 }
 
-href {
-  color: white;
+a:link,
+a:visited,
+a:hover,
+a:focus,
+a:active {
+    text-decoration: none
 }
 
-label {
-  color: white;
+.document-container {
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center
+}
+
+.responsive-container {
+    width: 1200px;
+    margin: auto;
+}
+
+@media only screen and (max-width: 1200px) {
+    .responsive-container {
+        width: 960px;
+    }
+}
+
+@media only screen and (max-width: 960px) {
+    .responsive-container {
+        width: 768px
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .responsive-container {
+        width: 550px
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .responsive-container {
+        width: 380px
+    }
+
+    h1, h2 {
+        font-size: 32px
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .responsive-container {
+        width: 320px
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .responsive-container {
+        width: 300px
+    }
+}
+
+/* #2 - Title Container */
+.title-container {
+    text-align: center;
+    width: 100%;
+    padding-bottom: 40px;
+    padding-top: 30vh
+}
+
+.title-container h1 {
+    font-family: var(--title-font);
+    /* Jake Change, white to black */
+    color: var(--black);
+    font-size: 100px;
+    opacity: 0.0;
+    text-transform: uppercase;
+    animation: fadeIn ease 10s;
+    -webkit-animation: fadeIn ease 10s;
+    animation-fill-mode: forwards;
+}
+
+@media only screen and (max-width: 700px) {
+    .title-container h1 {
+        font-size: 50px
+    }
+    .title-container {
+        padding-bottom: 20px
+    }
+}
+
+.button-container {
+    animation: fadeIn ease 10s;
+    -webkit-animation: fadeIn ease 10s;
+    animation-fill-mode: forwards
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-ms-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.signup-login-container {
+    width: 100%
+}
+
+.forms-container {
+    margin: auto;
+    text-align: center
+}
+
+.button-container {
+    display: flex;
+    justify-content: center
+}
+
+.login-button {
+    order: 1;
+}
+
+.login-button-padding {
+    margin-right: 10px;
+}
+
+.signup-button {
+    order: 2
+}
+
+#username-login, #password-login, #username-signup, #password-signup {
+    width: 280px;
+    height: 46px;
+    border: 1px solid #DFE5EC;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 20px;
+    font-family: var(--body-font);
+    padding-left: 10px
+}
+
+.login-container, .signup-container {
+    width: 320px;
+    border: 2px solid var(--black);
+    border-radius: 4px;
+    background: var(--white);
+    margin: auto;
+    padding: 20px 0;
+    margin-top: 10px;
+    display: none
+}
+
+.login-container.is-open, .signup-container.is-open {
+    display: inline-block
+}
+
+.button-container.is-closed {
+    display: none
+}
+
+.change-option-signup {
+    font-size: 10px;
+    cursor: pointer;
+    font-weight: bold
+}
+
+.change-option-signup:hover, .change-option-signup:focus {
+    cursor: pointer;
+    color: blue;
+}
+/* #3 - Buttons */
+
+.login-button,
+.signup-button {
+    font-family: var(--body-font);
+    font-size: 18px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    width: 100px;
+    height: 35px;
+    border: 2px solid var(--black);
+    background: var(--white);
+    text-align: center;
+    color: var(--black);
+    cursor: pointer;
+    font-weight: bold
+}
+
+.login-button:hover,
+.login-button:focus,
+.signup-button:hover,
+.signup-button:focus,
+.btn:hover,
+.btn:focus {
+    color: var(--white);
+    background: var(--black);
+    cursor: pointer;
+}
+
+/* Text Adventure Box */
+
+#text {
+    text-transform: lowercase;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #f3f3f3;
 }
 
 .container {
-  width: 800px;
-  max-width: 80%;
-  background-color: white;
-  padding: 10px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px 2px;
+    width: 600px;
+    margin: auto;
+    border: 2px solid var(--black);
+    border-radius: 4px;
+    background: var(--white);
+    padding: 20px;
+    font-style: var(--body-font)
 }
 
-.btn-grid {
-  display: grid;
-  grid-template-columns: repeat(2, auto);
-  gap: 10px;
-  margin-top: 20px;
+.margin-top-container {
+    padding-top: 20vh
+}
+
+.full-page-container {
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center
 }
 
 .btn {
-  background-color: hsl(200, 100%, 50%);
-  border: 1px solid hsl(200, 100%, 30%);
-  border-radius: 5px;
-  padding: 5px 10px;
-  color: white;
-  outline: none;
+    font-family: var(--body-font);
+    font-size: 18px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    border: 2px solid var(--black);
+    background: var(--white);
+    text-align: center;
+    color: var(--black);
+    cursor: pointer;
+    font-weight: bold;
+    padding: 10px 15px
 }
 
-.btn:hover {
-  border-color: black;
+.btn-grid {
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between
+}
+
+.option-one,
+.option-two,
+.option-three,
+.option-four {
+    margin-top: 10px
+}
+.option-one {
+    grid: 1
+}
+
+.option-two {
+    grid: 2
+}
+
+.option-three {
+    grid: 3
+}
+
+.option-four {
+    grid: 4
+}
+
+@media only screen and (max-width: 700px) {
+    .container {
+        width: 550px;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .container {
+        width: 380px
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .container {
+        width: 320px
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .contaienr {
+        width: 300px
+    }
+}
+
+/* #5 - Backgrounds */
+
+.twin-peaks {
+    background: url("../images/AdobeStock_311296925.jpeg");
+}
+
+.background-space {
+    background-image: url('../assets/images/AdobeStock_67578633.jpeg');
+}
+
+.background-hydro-racks {
+    background-image: url('../assets/images/AdobeStock_187209494.jpeg')
+}
+
+.background-rock-circle-earth {
+    background-image: url('../assets/images/AdobeStock_196443728.jpeg')
+}
+
+.background-event-horrizon {
+    background-image: url('../assets/images/AdobeStock_277854607.jpeg')
+}
+
+.background-neon-circle {
+    background-image: url('../assets/images/AdobeStock_286016841.jpeg')
+}
+
+.background-black-and-white {
+    background-image: url('../assets/images/AdobeStock_303699882.jpeg')
+}
+
+.black-white-planet-moon {
+    background-image: url('../assets/images/AdobeStock_199518545.jpeg')
+}
+
+.black-white-planet-sun {
+    background-image: url('../assets/images/AdobeStock_198557024.jpeg')
+}
+
+.black-white-eight-planet-sun {
+    background-image: url('../assets/images/AdobeStock_202458781.jpeg')
+}
+
+.black-white-saturn-sun {
+    background-image: url('../assets/images/AdobeStock_390173787.jpeg')
+}
+
+.black-white-mountains-sun {
+    background-image: url('../assets/images/AdobeStock_366561294.jpeg')
+}
+
+.black-white-saturn {
+    background-image: url('../assets/images/AdobeStock_363627223.jpeg')
+}
+
+.black-white-sun-plain {
+    background-image: url('../assets/images/AdobeStock_372285041.jpeg')
+}
+
+.black-white-solar-system {
+    background-image: url('../assets/images/AdobeStock_202458776.jpeg')
+}
+
+.black-white-grid-on-space {
+    background-image: url('../assets/images/AdobeStock_361821815.jpeg')
+}
+
+.black-white-sunshine-grid {
+    background-image: url('../assets/images/AdobeStock_386942903.jpeg')
+}
+
+.black-white-moon-view-earth {
+    background-image: url('../assets/images/AdobeStock_198557032.jpeg')
 }

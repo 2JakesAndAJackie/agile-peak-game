@@ -1,5 +1,8 @@
 const textElement = document.getElementById('text');
 const optionButtonsElement = document.getElementById('option-buttons')
+const background = document.getElementById('changing-background')
+
+// background.classList.toggle('BACKGROUND-CLASSß');
 
 let state = {};
 
