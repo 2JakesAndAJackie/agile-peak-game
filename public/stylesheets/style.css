@@ -122,8 +122,7 @@ a:active {
 
 .title-container h1 {
     font-family: var(--title-font);
-    /* Jake Change, white to black */
-    color: var(--black);
+    color: var(--white);
     font-size: 100px;
     opacity: 0.0;
     text-transform: uppercase;
@@ -297,7 +296,6 @@ a:active {
 /* Text Adventure Box */
 
 #text {
-    text-transform: lowercase;
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 10px;
@@ -323,7 +321,9 @@ a:active {
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center
+    background-position: center;
+    opacity: 1;
+    transition: 0.7s opacity;
 }
 
 .btn {
@@ -337,14 +337,15 @@ a:active {
     color: var(--black);
     cursor: pointer;
     font-weight: bold;
-    padding: 10px 15px
+    padding: 10px 15px;
+    margin: 10px
 }
 
 .btn-grid {
     margin: auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between
+    justify-content: center
 }
 
 .option-one,
@@ -396,73 +397,74 @@ a:active {
 /* #5 - Backgrounds */
 
 .twin-peaks {
-    background: url("../images/AdobeStock_311296925.jpeg");
+    background-image: url(../assets/images/login1.jpeg);
+    
 }
 
-.background-space {
-    background-image: url('../assets/images/AdobeStock_67578633.jpeg');
+.background-login {
+    background-image: url('../assets/images/prologue2.jpeg');
 }
 
-.background-hydro-racks {
-    background-image: url('../assets/images/AdobeStock_187209494.jpeg')
+.background-mainpage {
+    background-image: url('../assets/images/maingame6.jpeg')
 }
 
 .background-rock-circle-earth {
-    background-image: url('../assets/images/AdobeStock_196443728.jpeg')
+    background-image: url('AdobeStock_196443728.jpeg')
 }
 
 .background-event-horrizon {
-    background-image: url('../assets/images/AdobeStock_277854607.jpeg')
+    background-image: url('AdobeStock_277854607.jpeg')
 }
 
 .background-neon-circle {
-    background-image: url('../assets/images/AdobeStock_286016841.jpeg')
+    background-image: url('AdobeStock_286016841.jpeg')
 }
 
 .background-black-and-white {
-    background-image: url('../assets/images/AdobeStock_303699882.jpeg')
+    background-image: url('AdobeStock_303699882.jpeg')
 }
 
 .black-white-planet-moon {
-    background-image: url('../assets/images/AdobeStock_199518545.jpeg')
+    background-image: url('AdobeStock_199518545.jpeg')
 }
 
 .black-white-planet-sun {
-    background-image: url('../assets/images/AdobeStock_198557024.jpeg')
+    background-image: url('AdobeStock_198557024.jpeg')
 }
 
 .black-white-eight-planet-sun {
-    background-image: url('../assets/images/AdobeStock_202458781.jpeg')
+    background-image: url('AdobeStock_202458781.jpeg')
 }
 
 .black-white-saturn-sun {
-    background-image: url('../assets/images/AdobeStock_390173787.jpeg')
+    background-image: url('AdobeStock_390173787.jpeg')
 }
 
 .black-white-mountains-sun {
-    background-image: url('../assets/images/AdobeStock_366561294.jpeg')
+    background-image: url('AdobeStock_366561294.jpeg')
 }
 
 .black-white-saturn {
-    background-image: url('../assets/images/AdobeStock_363627223.jpeg')
+    background-image: url('AdobeStock_363627223.jpeg')
 }
 
 .black-white-sun-plain {
-    background-image: url('../assets/images/AdobeStock_372285041.jpeg')
+    background-image: url('AdobeStock_372285041.jpeg')
 }
 
 .black-white-solar-system {
-    background-image: url('../assets/images/AdobeStock_202458776.jpeg')
+    background-image: url('AdobeStock_202458776.jpeg')
 }
 
 .black-white-grid-on-space {
-    background-image: url('../assets/images/AdobeStock_361821815.jpeg')
+    background-image: url('AdobeStock_361821815.jpeg')
 }
 
 .black-white-sunshine-grid {
-    background-image: url('../assets/images/AdobeStock_386942903.jpeg')
+    background-image: url('AdobeStock_386942903.jpeg')
 }
 
 .black-white-moon-view-earth {
-    background-image: url('../assets/images/AdobeStock_198557032.jpeg')
+    background-image: url('AdobeStock_198557032.jpeg')
 }
