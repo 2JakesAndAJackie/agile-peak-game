@@ -68,7 +68,7 @@ const textNodes = [
     },
     {
       id: 2,
-      text: "You make your way to the communications deck. The door opens, and the cold, slick sense of terror slithers down your spine. Blood stains the walls, the desks, everything. Aside from the remains of the brutal carnage, you see nothing of interest. The speaker in your suit beeps, and Jason tells you to hurry to Storage.",
+      text: "You make your way to the Communications deck. The door opens, and the cold, slick sense of terror slithers down your spine. Blood stains the walls, the desks-- everything. Aside from the remains of the brutal carnage, you see nothing of interest. The speaker in your suit beeps, and Jason tells you to hurry to Storage.",
       options: [
         {
           text: "Rush to Storage",
@@ -84,7 +84,7 @@ const textNodes = [
     },
     {
       id: 3,
-      text: "You go to the Bridge. In the Captain's seat is the Captain's slumped body, a deep gash sweeping up along the side of his neck. You see the small, bloody blade of an astro knife on the ground.",
+      text: "You go to the Bridge. In the Captain's seat is the Captain's slumped body, a deep gash sweeps up along the side of his neck. You see the small, bloody blade of an astro knife on the ground.",
       options: [
         {
           text: "Take the knife",
@@ -119,7 +119,7 @@ const textNodes = [
     },
     {
       id: 4,
-      text: "The great vacuum of space pull you violently from the airlock, and in death you drift through space as a corpseicle.",
+      text: "The great vacuum of space pulls you violently from the airlock, and in death you drift through space as a corpseicle.",
       options: [
         {
           text: 'Restart',
@@ -129,7 +129,7 @@ const textNodes = [
     },
     {
       id: 5,
-      text: "You arrive at Storage with your lungs and legs burning. Jason is standing over an large, oddly shapen, metal box. He turns and grins at you. 'I was just about to open it without you,' he says wryly. 'You can do the honors my friend'. You walk over to the box and pry it open. Inside you see a gold ring with what looks like letters of some obscure or ancient language engraved on it. You pick it up, the ring surprisingly heavy for such a small thing. You and Jason find nothing else of value.",
+      text: "You arrive at Storage with your lungs and legs burning. Jason is standing over a large, oddly shaped, metal box. He turns and grins at you. 'I was just about to open it without you,' he says wryly. 'You can do the honors my friend'. You walk over to the box and pry it open. Inside you see a gold ring with what looks like letters of some obscure or ancient language engraved on it. You pick it up, the ring surprisingly heavy for such a small thing. You and JSon find nothing else of value.",
       options: [
         {
           text: "Return to the Yamath.",
@@ -139,7 +139,7 @@ const textNodes = [
     },
     {
       id: 6,
-      text: "Your curiosity gets the better of you and wander around the ship, eventually meandering your way to the Communal Deck. You catch only a glimpse of the horrific scene before you, bodies and gore strewn about the floor, before turning away quickly and going to Storage. Once there, you see Jason standing over an open metal box, eyeing a gold ring. You ask if there was anything else, and he shakes his head in response. 'We should get back, I would rather not keep looking arouond to see more of the Mephistopheles crew'.",
+      text: "Your curiosity gets the better of you and you wander around the ship, eventually meandering your way to the Communal Deck. You catch only a glimpse of the horrific scene before you, bodies and gore strewn about the floor, before turning away quickly and going to Storage. Once there, you see Jason standing over an open metal box, eyeing a gold ring. You ask if there was anything else, and he shakes his head in response. 'We should get back, I would rather not keep looking arouond to see more of what remains of the Mephistopheles crew'.",
       options: [
         {
           text: "Return to the Yamath.",
@@ -177,7 +177,7 @@ const textNodes = [
     },
     {
       id: 10,
-      text: "You feel so warmth. Vibrant. Alive! The world - or ship - is yours for the taking on this day. Where to go first?",
+      text: "You feel so warm. Vibrant. Alive! The world - or ship - is yours for the taking on this day. Where to go first?",
       options: [
         {
           text: "Go to the Cafeteria",
@@ -199,7 +199,7 @@ const textNodes = [
 
     {
       id: 1000,
-      text: "A soft whirring sound wakes you. You groan as you lean up to see the door to your finish opening, but no one in sight.",
+      text: "A soft whirring sound wakes you. You groan as you lean up to see the door to your room finish opening, but no one in sight.",
       options: [
         {
           text: "Go back to sleep",
