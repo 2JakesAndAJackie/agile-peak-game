@@ -367,6 +367,24 @@ const textNodes = [
       ]
     },
     {
+      id: 1009,
+      text: "You enter the Cafeteria. Your stomach rumbles loudly, but it doesn't change the fact that Jasmine is at the food dispenser. You wait. Impatiently, but you wait nonetheless. Suddenly she shrieks like she just witnessed a murder.",
+      options: [
+        {
+          text: "Go see if she's okay",
+          nextText: 1017
+        },
+        {
+          text: "Ask if she's okay",
+          nextText: 1018
+        },
+        {
+          text: "Run away",
+          nextText: 1019
+        }
+      ]
+    },
+    {
       id: 1010,
       text: "With shocking agility you find yourself curled up behind the desk. The door opens and the padding of footsteps approach. They grow closer to the desk as your breathing gets shaky. You could swear each breath was as loud as a crack of thunder. Suddenly there's a loud bang on the table. 'What in the hell are you doing? This is why I told you to get your ass to Jocelyn', Jessop says. You look up at him, a little ashamed and very much embarrassed. 'Why are you sitting there all sheepish. Get your ass in gear now!' he shouts.",
       options: [
@@ -390,7 +408,63 @@ const textNodes = [
     },
     {
       id: 1011,
-      text: "blah..."
+      text: "You race to Jocelyn, droplets of sweat on your brow when you arrive. Despite your sudden arrival and clear panic, her gaze is unwaveringly impassive.",
+      options: [
+        {
+          text: "Tell her what happened to the crew",
+          nextText: 1012
+        },
+        {
+          text: "Tell her about the ring",
+          nextText: 1013
+        },
+        {
+          text: "Tell her about this morning",
+          nextText: 1020
+        }
+      ]
+    },
+    {
+      id: 1012,
+      text: "You tell her about what you saw in the Mephistopheles, the tragic remains of its crew, yet her face gives nothing away. 'How does this make you feel?' she asks. 'You tell me, this has me confused as hell,' you respond. To your surprise this elicits a chuckle from her. 'I would be worried if that was not the case. For now, go make yourself busy. I am here if you need to talk'.",
+      options: [
+        {
+          text: "option1",
+          nextText: 1021
+        },
+        {
+          text: "option2",
+          nextText: 1022
+        }
+      ]
+    },
+    {
+      id: 1013,
+      text: "You tell her about the Jason, the metal box, and the gold ring. She cocks an eyebrow. 'Does that cause you discomfort?' she asks. You tell her you're unsure. 'Rather unhelpful.' She shakes her head at you and points you to the door. 'If you decide you have anything worth talking about, you know where to find me.",
+      options: [
+        {
+          text: "option2",
+          nextText: 1022
+        },
+        {
+          text: "option3",
+          nextText: 1023
+        }
+      ]
+    },
+    {
+      id: 1014,
+      text: "You tell her about your weird morning, how disconcerting it has been. 'Tell me what your concern is,' she orders. You think for a moment, piecing everything together in your mind. 'I worry that someone on the ship is going to do to us what happened on the Mephistopheles. Jessop told you what we found right?' She nods and purses her lips. 'I appreciate your coming to me. Focus on your work, and I will look into this.",
+      options: [
+        {
+          text: "option3",
+          nextText: 1023
+        }
+        {
+          text: "option1",
+          nextText: 1021
+        }
+      ]
     }
 
   ]
