@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="/stylesheets/style.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Titillium+Web:wght@300&family=Turret+Road:wght@200&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.1/howler.min.js" integrity="sha512-L6Z/YtIPQ7eU3BProP34WGU5yIRk7tNHk7vaC2dB1Vy1atz6wl9mCkTPPZ2Rn1qPr+vY2mZ9odZLdGYuaBk7dQ==" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -18,8 +19,21 @@
     </main>
   </div>
 
+<script>
+  
+  function musicPlayer() {
+    let sound = new Howl({
+        src: ['../assets/music/02 Says.m4a', '02 Says.webm'],
+        html5: true,
+        loop: true,
+      });
+      
+      sound.play();
+  };
+
+  document.querySelector('#musicToggle').addEventListener('click', musicPlayer);
+</script>
 <script src="javascript/logout.js"></script>
-<script src="javascript/howler.js"></script>
 </body>
 
 </html>
