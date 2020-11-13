@@ -459,7 +459,7 @@ const textNodes = [
         {
           text: "option3",
           nextText: 1023
-        }
+        },
         {
           text: "option1",
           nextText: 1021
