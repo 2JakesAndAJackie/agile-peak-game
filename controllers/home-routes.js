@@ -20,9 +20,11 @@ router.get('/', (req, res) => {
     if(!req.session.loggedIn) {
         res.redirect('/login')
     }
+    else {
+        //pass a single post object into the homepage template
+        res.render('homepage');
+    }
 
-    //pass a single post object into the homepage template
-    res.render('homepage');
 
 });
 
