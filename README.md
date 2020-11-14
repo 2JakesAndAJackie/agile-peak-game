@@ -25,8 +25,10 @@
   ## Contribution
   We are always looking to expand the story. Take a gander at how we've structured the game logic and add a couple of paths yourself
 
-  ## Tests
-  See Video
+  ## Examples
+  ![Landing-Page](/readmeImages/Landing.png)
+  ![Login](readmeImages/Login.png)
+  ![Game](readmeImages/Game.png)
   
   ## Contact
   Learn more about the owner of this project by visiting their Github Profile: <a href=https://github.com/2JakesAndAJackie>2JakesAndAJackie</a>
