@@ -180,21 +180,22 @@ const textNodes = [
       text: "You feel so warm. Vibrant. Alive! The world - or ship - is yours for the taking on this day. Where to go first?",
       options: [
         {
-          text: "Go to the Cafeteria",
-          nextText: 11
+          //11
+          text: "Go to the Cafeteria (to be continued)",
+          nextText: -1
         },
         {
-          text: "Go to the ship psychiatrist",
-          nextText: 12
+          //12
+          text: "Go to the ship psychiatrist (to be continued)",
+          nextText: -1
         },
         {
-          text: "Go to the Oxygen Garden",
-          nextText: 13
+          //13
+          text: "Go to the Oxygen Garden (to be continued)",
+          nextText: -1
         }
       ]
     },
-
-
 
 
     {
@@ -346,16 +347,19 @@ const textNodes = [
       text: "You enter the Cafeteria. Your stomach rumbles loudly, but it doesn't change the fact that Jasmine is at the food dispenser. You wait. Impatiently, but you wait nonetheless. Suddenly she shrieks like she just witnessed a murder.",
       options: [
         {
-          text: "Go see if she's okay",
-          nextText: 1017
+          //1017
+          text: "Go see if she's okay (to be continued)",
+          nextText: -1
         },
         {
-          text: "Ask if she's okay",
-          nextText: 1018
+          //1018
+          text: "Ask if she's okay (to be continued)",
+          nextText: -1
         },
         {
-          text: "Run away",
-          nextText: 1019
+          //1019
+          text: "Run away (to be continued)",
+          nextText: -1
         }
       ]
     },
@@ -394,8 +398,9 @@ const textNodes = [
           nextText: 1013
         },
         {
-          text: "Tell her about this morning",
-          nextText: 1020
+          //1020
+          text: "Tell her about this morning (to be continued)",
+          nextText: -1
         }
       ]
     },
@@ -404,12 +409,14 @@ const textNodes = [
       text: "You tell her about what you saw in the Mephistopheles, the tragic remains of its crew, yet her face gives nothing away. 'How does this make you feel?' she asks. 'You tell me, this has me confused as hell,' you respond. To your surprise this elicits a chuckle from her. 'I would be worried if that was not the case. For now, go make yourself busy. I am here if you need to talk'.",
       options: [
         {
+          //1021
           text: "option1",
-          nextText: 1021
+          nextText: -1
         },
         {
+          //1022
           text: "option2",
-          nextText: 1022
+          nextText: -1
         }
       ]
     },
@@ -418,12 +425,14 @@ const textNodes = [
       text: "You tell her about the Jason, the metal box, and the gold ring. She cocks an eyebrow. 'Does that cause you discomfort?' she asks. You tell her you're unsure. 'Rather unhelpful.' She shakes her head at you and points you to the door. 'If you decide you have anything worth talking about, you know where to find me.",
       options: [
         {
+          //1022
           text: "option2",
-          nextText: 1022
+          nextText: -1
         },
         {
+          //1023
           text: "option3",
-          nextText: 1023
+          nextText: -1
         }
       ]
     },
@@ -432,12 +441,44 @@ const textNodes = [
       text: "You tell her about your weird morning, how disconcerting it has been. 'Tell me what your concern is,' she orders. You think for a moment, piecing everything together in your mind. 'I worry that someone on the ship is going to do to us what happened on the Mephistopheles. Jessop told you what we found right?' She nods and purses her lips. 'I appreciate your coming to me. Focus on your work, and I will look into this.",
       options: [
         {
+          //1023
           text: "option3",
-          nextText: 1023
+          nextText: -1
         },
         {
+          //1021
           text: "option1",
-          nextText: 1021
+          nextText: -1
+        }
+      ]
+    },
+    {
+      id: 1015,
+      text: "The door to the Cafeteria opens, and you find yourself face to face with someone in an spacesuit. Behind them is Jasmine, cut into several pieces. You stumble back and turn to run, but a blade is thrust into your back and swept across, severing your spinal cord. You crumple to the ground, unable to move your legs. You struggle anyway, dragging yourself with your arms until your head is pulled back roughly, and your throat opened in bloody fantasia.",
+      options: [
+        {
+          text: "Restart",
+          nextText: -1
+        }
+      ]
+    },
+    {
+      id: 1016,
+      text: "On the way to the Cafeteria you see someone in their space suit. You ask if there's some work needing done on the outside of the ship, but get no response. You shrug it off and open the Cafeteria door. Jasmine is there, her head and limbs severed from the torso. You find yourself unable to breathe. 'Oh... oh god.' you whisper.",
+      options: [
+        {
+          text: "Continue",
+          nextText: 1024
+        }
+      ]
+    },
+    {
+      id: 1024,
+      text: "You turn to run and alert the others, and bump into Jason. He mumbles incoherently at you, then stops in his tracks. You see the cogs in his mind turning. He looks at Jasmine's remains, at you, at the knife you hold. You drop the knife and start trying to explain but suddenly he has you in a choke hold. In a flash you wake in Storage, tied up with the rest of the crew talking, sometimes sneaking glances at you.",
+      options: [
+        {
+          text: "To be continued",
+          nextText: -1
         }
       ]
     }
